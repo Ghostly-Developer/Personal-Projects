@@ -1,0 +1,39 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binaries
+*.test
+
+# Go workspace
+# Local binaries
+bin/
+# Local packages (if not using Go modules)
+pkg/
+
+# Dependency caches
+# Go modules cache
+vendor/
+
+# Editor/IDE specific files
+.idea/ # IntelliJ IDEA
+.vscode/ # VS Code
+*.sublime-project
+*.sublime-workspace
+
+# Operating System files
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Log files
+*.log
+
+# Temporary files
+*~
+#*#
+.#*
+*.bak
+*.swp
+*.tmp
