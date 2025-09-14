@@ -1,0 +1,12 @@
+git clone <repo-url> tic_api
+Set-Location -Path 'a:\Codes\Tic_Tac_Toe\tic_api'
+
+# Quick run (compile & run):
+go run ./src/main.go
+
+# Build and run executable:
+go build -o tic_api.exe ./src
+.\tic_api.exe
+
+# Build all packages:
+go build ./...
