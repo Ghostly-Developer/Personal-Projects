@@ -10,7 +10,7 @@ import (
 )
 
 type Request struct {
-	PlayerId string          `json:"Player"`
+	PlayerId string          `json:"PlayerId"`
 	Flow     string          `json:"Flow"`
 	Action   string          `json:"Action"`
 	PayLoad  json.RawMessage `json:"Payload"`
@@ -59,7 +59,7 @@ func handleConnections(w http.ResponseWriter, r *http.Request) {
 		var request Request
 		if err := json.Unmarshal(msg, &request); err != nil {
 			log.Println("Error unmarshalling message:", err)
-			SendError(request.PlayerId, "Invalid request format.")
+			conn.WriteMessage(websocket.TextMessage, []byte(`{"Status":"error","Message":"Invalid request format."}`))
 			continue
 		}
 		if request.PlayerId == "" || request.Flow == "" || request.Action == "" {
