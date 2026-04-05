@@ -1,0 +1,8 @@
+User:
+    ->Send original Url, get short url
+    ->Send original Url with timout, get short url but expiry
+    
+    ->Enter Shorten Url in brower -> Redirect to Correct URL
+    ->Enter Shorten Url in brower -> 404 {Url not found}
+    ->Enter Shorten Url in brower -> Expired Url
+
